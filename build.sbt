@@ -13,5 +13,8 @@ libraryDependencies ++= Seq(
   "junit" % "junit" % "4.12" % "test",
   "com.novocode" % "junit-interface" % "0.11" % "test"
 )
+libraryDependencies += "com.typesafe.akka" %% "akka-persistence" % "2.5.23"
+libraryDependencies += "com.typesafe.akka" %% "akka-remote" % "2.5.23"
+libraryDependencies += "com.typesafe.akka" %% "akka-cluster" % "2.5.23"
 
 testOptions += Tests.Argument(TestFrameworks.JUnit, "-v")

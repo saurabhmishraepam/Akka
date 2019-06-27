@@ -1,7 +1,7 @@
 package dataProcessor
 
 import akka.actor.{Actor, ActorRef, ActorSystem, Props}
-
+import akka.persistence.PersistentActor
 
 import scala.util.Random
 
@@ -9,9 +9,9 @@ import scala.util.Random
 
 class Worker extends Actor{
 
-
   override def receive: Receive = {
 
+    case _ =>{println("default")}
     case Worker.Work(msg) =>{
       println(s" This is the actor $self $msg")
     }
